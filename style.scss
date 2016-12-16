@@ -52,11 +52,11 @@ table {
 
 ////////////////////////////Sass Variables////////////////////////////
 
-$black: #000;
-$blue: #008080;
-$lavender: #6c648b;
-$rose: #b6a19e;
-$yellow: #fba100;
+$navy: #1e1e20;
+$grey: #2a2c2b;
+$blue: #374140;
+$tan: #d9cb9e;
+$redOrange: #dc3522;
 
 ////////////////////////////html////////////////////////////
 
@@ -87,7 +87,8 @@ nav {
 text-align: center; 
 background-color: black;
 color: white;
-background-attachment:scroll;
+position: fixed;
+width: 100%;
 
     
 ul {
@@ -102,7 +103,7 @@ padding: 10px;
 }
 
 li:hover{
-color: $yellow;
+color: $redOrange;
 }
     
 }
@@ -111,17 +112,19 @@ color: $yellow;
 ////////////////////////////Logo////////////////////////////
 
 
-.soccerPhoto{
+.cityPhoto{
 background-image: url(images/city.png);
-background-position: center;
+background-position: bottom;
 background-size: cover;
+background-attachment:fixed;
 height: 400px;
-background-color: rgba(251, 161, 0, 0.63);
+background-color: rgba(0, 0, 0, 0.44);
 background-blend-mode: multiply;
 
 
+
 h1{
-padding-top: 100px;
+padding-top: 130px;
 text-align: center;
 font-size: 80px;
 color: #fff;
@@ -148,10 +151,10 @@ font-weight: 400;
 }
 
 .aboutMe {
-    background-color: $blue;
+    background-color: $redOrange;
 
     h1 {
-        color: white;
+        color: whitesmoke;
         font-weight: lighter;
         font-size: 50px;
         text-align: center;
@@ -175,13 +178,13 @@ font-weight: 400;
 
 .classes{
 padding-top: 20px;
-background-color: $yellow;
+background-color: $blue;
 height: 100%;
 overflow: auto;
 
     
     h1{
-        color: white;
+        color: whitesmoke;
         font-weight: lighter;
         font-size: 50px;
         text-align: center;
@@ -191,7 +194,7 @@ overflow: auto;
         text-align: center;
         padding-top: 25px;
         font-size: 25px;
-        color: white;
+        color: $tan;
        
         
    
@@ -207,17 +210,17 @@ overflow: auto;
         padding-bottom: 10px;
      
     a:link{
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
     }    
         
     a:hover{
-    color: white;
+    color: $redOrange;
     text-decoration: none;
     }
         
     a:visited{
-    color: $blue;        
+    color: $redOrange;        
     }
     
     }
@@ -226,6 +229,76 @@ overflow: auto;
     
 
 }
+
+////////////////////////////Work////////////////////////////
+
+
+.work{
+height: 100%;  
+    
+ h1{
+        color: black;
+        font-weight: lighter;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 20px;
+     padding-bottom: 20px;
+    
+    }
+}
+
+
+.grid {
+    background-color: white;
+
+    height: 100%;
+    margin: 0 auto;
+text-align: center;
+
+    
+}
+
+.grid_box {
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    margin: 2%;
+    display: inline-block;
+    vertical-align: top;
+    img {
+        height: 210px;
+        width: 210px;
+        object-fit: cover;
+        
+    }
+    
+    p {
+        text-align: center;
+        font-weight:300;
+    }
+   
+    
+    a{
+        text-decoration: none;
+       
+    }
+    a:hover:before{
+        background-color: black;
+    }
+    
+    h3{
+        font-weight: 700;
+        padding: 7px;
+    }
+    
+   
+  
+}
+
+
+
+ 
+
 
 
 ////////////////////////////Footer////////////////////////////
