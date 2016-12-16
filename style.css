@@ -1,3 +1,4 @@
+/******************************************** Reset ********************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -45,6 +46,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/**************************************** Sass Variable ****************************************/
+/**************************************** HTML ****************************************/
 html {
   font-family: 'Raleway', sans-serif; }
 
@@ -52,20 +55,46 @@ html {
   float: left;
   width: 25%; }
 
+.f25R {
+  width: 25%;
+  float: right; }
+
+.f33 {
+  float: left;
+  width: 25%; }
+
+.f33R {
+  width: 25%;
+  float: right; }
+
+.f50R {
+  width: 50%;
+  float: right; }
+
 .f50 {
   width: 50%;
+  float: left; }
+
+.f75R {
+  width: 75%;
+  float: right; }
+
+.f75 {
+  width: 75%;
   float: left; }
 
 .f100 {
   width: 100%;
   clear: left; }
 
+/**************************************** Navigation ****************************************/
 nav {
   text-align: center;
   background-color: black;
   color: white;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
   nav ul {
     list-style-type: none; }
   nav li {
@@ -75,6 +104,7 @@ nav {
   nav li:hover {
     color: #dc3522; }
 
+/**************************************** Header ****************************************/
 .cityPhoto {
   background-image: url(images/city.png);
   background-position: bottom;
@@ -97,6 +127,7 @@ nav {
     font-weight: 400;
     text-shadow: 4px 4px 10px #000; }
 
+/**************************************** About Section ****************************************/
 .about {
   height: 400px;
   width: 100%; }
@@ -115,6 +146,7 @@ nav {
   padding: 5%;
   text-align: justify; }
 
+/**************************************** Classes Section ****************************************/
 .classes {
   padding-top: 20px;
   background-color: #374140;
@@ -144,6 +176,7 @@ nav {
     .classes li a:visited {
       color: #dc3522; }
 
+/******************************** Work Samples Section ********************************/
 .work {
   height: 100%; }
   .work h1 {
@@ -182,8 +215,182 @@ nav {
     font-weight: 700;
     padding: 7px; }
 
+.small {
+  font-size: 14px;
+  font-weight: 200; }
+
+.overlay {
+  position: relative; }
+
+.overlay:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  display: none;
+  z-index: 0; }
+
+.overlay:hover:before {
+  display: block; }
+
+.black:before {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/**************************************** Skills Section ****************************************/
+.skills {
+  height: 400px;
+  width: 100%; }
+  .skills h3 {
+    padding: 10px;
+    margin: 0 auto;
+    text-align: left;
+    width: 80%; }
+
+.mySkills {
+  background-color: #dc3522; }
+  .mySkills h1 {
+    color: whitesmoke;
+    font-weight: lighter;
+    font-size: 50px;
+    text-align: center; }
+
+.skillsInfo {
+  padding: 5px;
+  color: black;
+  width: 99%; }
+
+.skillsPadBottom {
+  padding-bottom: 30px; }
+
+/******************* Progress Bar  ******************/
+#myProgress {
+  position: relative;
+  height: 15px;
+  border: 1px solid black;
+  width: 80%;
+  margin: 0 auto; }
+
+#label {
+  text-align: center;
+  line-height: 15px;
+  color: black;
+  font-size: 15px; }
+
+.end {
+  float: right; }
+
+.cProgress {
+  text-align: center;
+  padding-bottom: 40px; }
+
+#htmlBar {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#JavaJQBar {
+  position: absolute;
+  width: 43%;
+  height: 100%;
+  background-color: #FCDC3B; }
+
+#IllustratorBar {
+  position: absolute;
+  width: 81%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#PhotoshopBar {
+  position: absolute;
+  width: 87%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#IndesignBar {
+  position: absolute;
+  width: 82%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#DreamBar {
+  position: absolute;
+  width: 84%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#CMSBar {
+  position: absolute;
+  width: 76%;
+  height: 100%;
+  background-color: #FCDC3B; }
+
+#PHPBar {
+  position: absolute;
+  width: 32%;
+  height: 100%;
+  background-color: #dc3522; }
+
+#mySQLBar {
+  position: absolute;
+  width: 69%;
+  height: 100%;
+  background-color: #FCDC3B; }
+
+#sMediaBar {
+  position: absolute;
+  width: 97%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#mOfficeBar {
+  position: absolute;
+  width: 93%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#PPCCBar {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+#SCSSGitBar {
+  position: absolute;
+  width: 84%;
+  height: 100%;
+  background-color: #4CAF50; }
+
+.key li {
+  padding: 10px;
+  display: inline-block; }
+.key span {
+  padding-left: 20px; }
+.key #redBox {
+  background-color: #dc3522;
+  color: #dc3522; }
+.key #yellowBox {
+  background-color: #FCDC3B;
+  color: #FCDC3B; }
+.key #greenBox {
+  background-color: #4CAF50;
+  color: #4CAF50; }
+
+/**************************************** Footer ****************************************/
+/**************************************** Media Queries ****************************************/
 @media only screen and (min-width: 400px) {
   .f50 {
+    width: 100%; }
+
+  .f50R {
+    width: 100%; }
+
+  .f25R {
+    width: 100%; }
+
+  .f75R {
     width: 100%; }
 
   .aboutMe {
@@ -195,10 +402,31 @@ nav {
     width: 50%; }
 
   .f25:nth-of-type(2n+1) {
-    clear: left; } }
+    clear: left; }
+
+  .mySkills {
+    height: 200px; }
+    .mySkills h1 {
+      padding-top: 80px; }
+
+  .key {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px; } }
 @media only screen and (min-width: 800px) {
   .f50 {
     width: 50%; }
+
+  .f50R {
+    width: 50%; }
+
+  .f25R {
+    width: 25%; }
+
+  .f75R {
+    width: 75%; }
 
   .aboutMe {
     height: 400px; }
@@ -209,6 +437,13 @@ nav {
     width: 25%; }
 
   .f25:nth-of-type(2n+1) {
-    clear: none; } }
+    clear: none; }
+
+  .key {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
