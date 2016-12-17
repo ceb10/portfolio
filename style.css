@@ -88,6 +88,36 @@ html {
   width: 100%;
   clear: left; }
 
+a.anchorTopAbout {
+  display: block;
+  position: relative;
+  top: -20px;
+  visibility: hidden; }
+
+a.anchorTopClasses {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden; }
+
+a.anchorTopWork {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden; }
+
+a.anchorTopSkills {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden; }
+
+a.anchorTopContact {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden; }
+
 /**************************************** Navigation ****************************************/
 nav {
   text-align: center;
@@ -101,10 +131,19 @@ nav {
     list-style-type: none; }
   nav li {
     display: inline-block;
-    font-size: 20px;
-    padding: 10px; }
-  nav li:hover {
+    padding: 10px;
+    font-size: 20px; }
+  nav li a {
+    color: white;
+    -webkit-animation-duration: 4s;
+    -webkit-transition: all 1.2s ease;
+    animation-duration: 4s;
+    transition: all 1.2s ease; }
+  nav li a:hover {
     color: #dc3522; }
+  nav li a:link {
+    color: white;
+    text-decoration: none; }
 
 /**************************************** Header ****************************************/
 .cityPhoto {
@@ -112,7 +151,7 @@ nav {
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-  height: 600px;
+  height: 630px;
   background-color: rgba(0, 0, 0, 0.44);
   background-blend-mode: multiply;
   -webkit-transform: translateZ(-199px) scale(1.1);
@@ -123,21 +162,89 @@ nav {
     color: #fff;
     font-weight: 800;
     text-shadow: 4px 4px 10px #000;
-    text-align: center; }
-  .cityPhoto h4 {
     text-align: center;
-    font-size: 30px;
-    color: #fff;
-    font-weight: 400;
-    text-shadow: 4px 4px 10px #000;
-    -webkit-transform: translateZ(999px) scale(0.8);
-    transform: translateZ(999px) scale(0.8); }
-
-.background-element {
-  -webkit-transform: translateZ(-999px) scale(2);
-  transform: translateZ(-999px) scale(2);
-  z-index: 3; }
-
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 4s;
+    /* Internet Explorer */
+    -o-animation: fadein 4s;
+    /* Opera < 12.1 */
+    animation: fadein 4s;
+    /* Firefox < 16 */
+    /* Safari, Chrome and Opera > 12.1 */
+    /* Internet Explorer */
+    /* Opera < 12.1 */ }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+h4 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 4px 4px 10px #000;
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 4s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 4s;
+  /* Internet Explorer */
+  -o-animation: fadein 4s;
+  /* Opera < 12.1 */
+  animation: fadein 4s;
+  /* Firefox < 16 */
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */ }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /**************************************** About Section ****************************************/
 .about {
   height: 400px;
@@ -181,12 +288,16 @@ nav {
     padding-bottom: 10px; }
     .classes li a:link {
       color: whitesmoke;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-animation-duration: 4s;
+      -webkit-transition: all 1.2s ease;
+      animation-duration: 4s;
+      transition: all 1.2s ease; }
     .classes li a:hover {
       color: #dc3522;
       text-decoration: none; }
     .classes li a:visited {
-      color: #dc3522; }
+      color: black; }
 
 /******************************** Work Samples Section ********************************/
 .work {
@@ -221,34 +332,37 @@ nav {
     font-weight: 300; }
   .grid_box a {
     text-decoration: none; }
-  .grid_box a:hover:before {
-    background-color: black; }
   .grid_box h3 {
     font-weight: 700;
     padding: 7px; }
 
+.hover {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 10px; }
+
+.hover img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; }
+
+.hover:hover img {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.4);
+  -webkit-filter: brightness(0.4); }
+
 .small {
   font-size: 14px;
   font-weight: 200; }
-
-.overlay {
-  position: relative; }
-
-.overlay:before {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 99%;
-  display: none;
-  z-index: 0; }
-
-.overlay:hover:before {
-  display: block; }
-
-.black:before {
-  background-color: rgba(0, 0, 0, 0.5); }
 
 /**************************************** Skills Section ****************************************/
 .skills {
