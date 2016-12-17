@@ -49,7 +49,8 @@ table {
 /**************************************** Sass Variable ****************************************/
 /**************************************** HTML ****************************************/
 html {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden; }
 
 .f25 {
   float: left;
@@ -94,7 +95,8 @@ nav {
   color: white;
   position: fixed;
   width: 100%;
-  z-index: 2; }
+  z-index: 2;
+  padding: 5px; }
   nav ul {
     list-style-type: none; }
   nav li {
@@ -110,27 +112,37 @@ nav {
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-  height: 400px;
+  height: 600px;
   background-color: rgba(0, 0, 0, 0.44);
-  background-blend-mode: multiply; }
+  background-blend-mode: multiply;
+  -webkit-transform: translateZ(-199px) scale(1.1);
+  transform: translateZ(-999px) scale(1.1); }
   .cityPhoto h1 {
-    padding-top: 130px;
-    text-align: center;
-    font-size: 80px;
+    padding-top: 260px;
+    font-size: 70px;
     color: #fff;
-    font-weight: 700;
-    text-shadow: 4px 4px 10px #000; }
+    font-weight: 800;
+    text-shadow: 4px 4px 10px #000;
+    text-align: center; }
   .cityPhoto h4 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
     font-weight: 400;
-    text-shadow: 4px 4px 10px #000; }
+    text-shadow: 4px 4px 10px #000;
+    -webkit-transform: translateZ(999px) scale(0.8);
+    transform: translateZ(999px) scale(0.8); }
+
+.background-element {
+  -webkit-transform: translateZ(-999px) scale(2);
+  transform: translateZ(-999px) scale(2);
+  z-index: 3; }
 
 /**************************************** About Section ****************************************/
 .about {
   height: 400px;
-  width: 100%; }
+  width: 100%;
+  margin-top: 30px; }
 
 .aboutMe {
   background-color: #dc3522; }
@@ -379,6 +391,47 @@ nav {
   color: #4CAF50; }
 
 /**************************************** Footer ****************************************/
+footer {
+  background-color: #1e1e20;
+  height: 100%; }
+  footer h1 {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px; }
+  footer h2 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; }
+  footer h3 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; }
+  footer p {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    padding: 20px; }
+
+i {
+  color: white;
+  margin: 0 auto;
+  padding-left: 9px;
+  padding-right: 9px; }
+
+.socialMedia {
+  text-align: center; }
+
 /**************************************** Media Queries ****************************************/
 @media only screen and (min-width: 400px) {
   .f50 {
@@ -407,7 +460,7 @@ nav {
   .mySkills {
     height: 200px; }
     .mySkills h1 {
-      padding-top: 80px; }
+      padding-top: 70px; }
 
   .key {
     text-align: left;
