@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Portfolio | Colleen Bowes</title>
+   <meta name="viewport" content="width=device-width,
+                               maximum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
@@ -14,26 +16,48 @@
     
     
 <!------------------------- Navigation ------------------------->
-<nav>
+
+    <nav class="f100 regNav">
     <ul>
         <li><a href="#home" >Home</a></li>
         <li><a href="#about" >About</a></li>
     <li><a href="#classes" >Classes</a></li>
     <li><a href="#work" >Work</a></li>
+    <li><a href="#skills" onclick="move">Skills</a></li>
+        <li><a href="#contact" >Contact</a></li>
+
+    </ul>
+        
+        
+  
+</nav>    
+    
+    <nav class="f100 mobileNav">
+    <a  id="mobileMenu"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+    <ul>
+        <li><a href="#home" >Home</a></li>
+        <li><a href="#about" >About</a></li>
+    <li><a href="#classes" >Classes</a></li>
+     
+        
+    <li><a href="#work" >Work</a></li>
     <li><a href="#skills" onclick="move()">Skills</a></li>
         <li><a href="#contact" >Contact</a></li>
-<!--
-    <li>NAV</li>
-    <li>NAV</li>
--->
+
     </ul>
+        
+        
+  
 </nav>
+    
+    
 <!------------------------- Navigation Ends ------------------------->
 
     
 <!------------------------- Header Photo ------------------------->
 <a name="home" id="home"></a>
-    <div class="cityPhoto overlay"><h1>&#60; Colleen Bowes /&#62;</h1><h4>Web Designer/Developer</h4>
+    
+    <div class="cityPhoto"><h1>&#60; Colleen Bowes /&#62;</h1><h4>Web Designer/Developer</h4>
         <a name="about" id="aboutAnchor" class="anchorTopAbout"></a>
     </div>
    
@@ -132,7 +156,7 @@
 <!------------------------- Classes Section Ends ------------------------->
 
 <!------------------------- Work Section ------------------------->    
-   <a name="work" id="work" class="anchorTopClasses"></a> 
+   <a name="work" id="work" class="anchorTopWork"></a> 
 <!--    <div id="workShow">-->
 <section class="work f100">
     
@@ -278,14 +302,14 @@
  
 <!------------------------- Work Section Ends ------------------------->    
 <!------------------------- Skills Section ------------------------->
-  <a name="skills" id="skillsAnchor" class="anchorTopClasses" ></a>
+  <a name="skills" id="skillsAnchor" class="anchorTopSkills" ></a>
    <a name="skills" id="skills" class="anchorTopClasses"></a> 
 
 <section class="skills f100">
     <div class="f100 mySkills"><h1> &#60; Skills &#62;</h1></div>
     <div class="f100 key">
     <ul>
-        <li><span id="redBox">......</span> = Basic Idea...  Need to work on it</li>
+        <li><span id="redBox">......</span> = Basic Idea...Working on it</li>
         <li><span id="yellowBox">......</span> = Getting there</li> 
         <li><span id="greenBox">......</span> = No problems here</li> 
     </ul>
@@ -406,18 +430,22 @@
    <a name="contact" id="contact" class="anchorTopContact"></a>  
 <footer class="f100">
     <div class="f100"><h1>Like what you see?</h1></div>  
-     <div class="f100"><h2>Contact me. I would love to hear from you.</h2></div> 
-<div class="f100"><h3>colleenbowes566@gmail.com</h3></div>
+     <div class="f100"><h2>Contact me. I would love to hear from you.</h2>
+       
+        
+    </div> 
+     <div class="f100"><h5>colleenbowes566@gmail.com</h5></div>
+
  <div class="f100 socialMedia">
-<i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i>    
+     <a href="https://www.facebook.com/colleen.bowes.73"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>    
 
-<i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i>    
+    <a href="https://twitter.com/bowes_colleen"><i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i></a>    
 
-<i class="fa fa-instagram fa-4x" aria-hidden="true"></i>    
+    <a href="https://www.instagram.com/mowwglii/?hl=en"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>    
 
-<i class="fa fa-github-square fa-4x" aria-hidden="true"></i> 
+    <a href="https://github.com/ceb10"><i class="fa fa-github-square fa-4x" aria-hidden="true"></i></a> 
     
-<i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+    <a href="https://www.linkedin.com/in/colleen-bowes-97077485?trk=hp-identity-photo"><i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a>
      
 
 </div>  

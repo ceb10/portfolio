@@ -25,39 +25,61 @@ $(document).ready(function(){
   });
 });
 
-///////////////////////// Progress Bars /////////////////////////
 
-//function move() {
-//  var elem = document.getElementById("htmlBar");   
-//  var width = 0;
-//  var id = setInterval(frame, 30);
-//  function frame() {
-//    if (width >= 90) {
-//      clearInterval(id);
-//    } else {
-//      width++; 
-//      elem.style.width = width + '%'; 
-//     document.getElementById("label").innerHTML = width * 1  + '%';
-//    }
-//  }
-//}
-
-
-   
 ///////////////////////// Scroll for About /////////////////////////
 
 
-$(document).ready(function() {
-    $("#aboutShow").hide(); //hide your div initially
-    var topOfOthDiv = $("#aboutAnchor").offset().top;
-    $(window).scroll(function() {
-        if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
-            $("#aboutShow").show(600);       
-            //reached the desired point -- show div
+//$(document).ready(function() {
+//    $("#aboutShow").hide(); //hide your div initially
+//    var topOfOthDiv = $("#aboutAnchor").offset().top;
+//    $(window).scroll(function() {
+//        if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+//            $("#aboutShow").show(600);       
+//            //reached the desired point -- show div
+//        }
+//    });
+//});
+
+
+///////////////////////// Progress Bars /////////////////////////
+
+
+
+   $(function() {
+    
+    var $meters = $(".meter > span");
+    var $section = $('#third');
+    var $queue = $({});
+    
+    function loadDaBars() {
+				$(".meter > span").each(function() {
+					$(this)
+						.data("origWidth", $(this).width())
+						.width(0)
+						.animate({
+							width: $(this).data("origWidth")
+						}, 1200);
+				});
+    }
+    
+    $(document).bind('scroll', function(ev) {
+        var scrollOffset = $(document).scrollTop();
+        var containerOffset = $section.offset() - window.innerHeight;
+        if (scrollOffset > containerOffset) {
+            loadDaBars();
+            // unbind event not to load scrolsl again
+            $(document).unbind('scroll');
         }
     });
+    
 });
 
 
+///////////////////////// Mobile Nav /////////////////////////    
 
-    
+$(document).ready(function(){ 
+    $('.mobileNav ul').hide();
+    $("#mobileMenu").click(function(){
+        $(".mobileNav ul").slideToggle('medium');
+    });
+});

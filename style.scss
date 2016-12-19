@@ -67,6 +67,10 @@ font-family: 'Raleway', sans-serif;
    overflow-x: hidden; 
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .f25{
 float: left;
 width: 25%;
@@ -119,27 +123,27 @@ clear: left;
 a.anchorTopAbout {
     display: block;
     position: relative;
-    top: -20px;
+    top: -51px;
     visibility: hidden;
 }
 
 a.anchorTopClasses {
     display: block;
     position: relative;
-    top: -50px;
+    top: -15px;
     visibility: hidden;
 }
 
 a.anchorTopWork {
     display: block;
     position: relative;
-    top: -50px;
+    top: -40px;
     visibility: hidden;
 }
 a.anchorTopSkills {
     display: block;
     position: relative;
-    top: -50px;
+    top: 0px;
     visibility: hidden;
 }
 a.anchorTopContact {
@@ -152,12 +156,12 @@ a.anchorTopContact {
 
 /**************************************** Navigation ****************************************/
 
-nav {
+.regNav {
 text-align: center; 
 background-color: rgb(0, 0, 0);
 color: white;
 position: fixed;
-width: 100%;
+width: 99%;
 z-index: 2;
     padding: 5px;
     
@@ -196,27 +200,75 @@ color: $redOrange;
 }
 
 
+.mobileNav {
+text-align: center; 
+background-color: rgb(0, 0, 0);
+color: white;
+position: fixed;
+width: 100%;
+z-index: 2;
+    padding: 5px;
+    
+    
+ul {
+list-style-type: none; 
+
+}
+    
+li{     
+    padding: 5px;
+    font-size: 15px; 
+    } 
+    
+li a{
+
+
+
+color: white;
+ -webkit-animation-duration: 4s;
+     -webkit-transition: all 1.2s ease;
+
+    animation-duration: 4s;
+   transition: all 1.2s ease;
+    
+}
+
+li:active{
+background-color: $redOrange;
+
+}
+    li a:link{
+        color: white;
+        text-decoration: none;
+    }
+    
+   
+    
+}
+
 /**************************************** Header ****************************************/
 
 
 .cityPhoto{
-background-image: url(images/city.png);
+background-image: url(images/ny-min.jpg);
 background-position: bottom;
 background-size: cover;
-background-attachment:fixed;
-height: 630px;
+
+background-attachment:scroll;
+height: 672px;
+width: 100%;
 background-color: rgba(0, 0, 0, 0.44);
 background-blend-mode: multiply;
-  -webkit-transform: translateZ(-199px) scale(1.1);
-    transform: translateZ(-999px) scale(1.1);
+
 
 
 
 
 h1{
 padding-top: 260px;
-
-font-size: 70px;
+padding-left: 10px;
+padding-right: 10px;
+font-size: 69px;
 color: #fff;
 font-weight: 800;
     text-shadow: 4px 4px 10px #000;   
@@ -271,6 +323,8 @@ font-size: 30px;
 color: #fff;
 font-weight: 400;
     text-shadow: 4px 4px 10px #000;
+padding-left: 10px;
+padding-right: 10px;
   
   
     
@@ -324,7 +378,7 @@ font-weight: 400;
 .about {
     height: 400px;
     width: 100%;
-        margin-top: 30px;
+//        margin-top: 30px;
         
 
 }
@@ -332,13 +386,13 @@ font-weight: 400;
 
 .aboutMe {
     background-color: $redOrange;
-
+height: 400px;
     h1 {
         color: whitesmoke;
         font-weight: lighter;
         font-size: 50px;
         text-align: center;
-        
+              padding-top: 180px;
     }
 }
 
@@ -346,10 +400,10 @@ font-weight: 400;
 
     p {
         font-size: 125%;
-        text-align: center;
+        text-align: left;
         padding: 5%;
       
-        text-align: justify;
+        
     }
 }
 
@@ -446,15 +500,15 @@ text-align: center;
 }
 
 .grid_box {
-    width: 210px;
+    width: 300px;
     height: 100%;
     background-color: white;
     margin: 2%;
     display: inline-block;
     vertical-align: top;
     img {
-        height: 210px;
-        width: 210px;
+        height:300px;
+        width:300px;
         object-fit: cover;
         
     }
@@ -535,14 +589,14 @@ font-weight: 200;
 
 .mySkills {
     background-color: $redOrange;
-
+ height: 200px;
 
     h1 {
         color: whitesmoke;
         font-weight: lighter;
         font-size: 50px;
         text-align: center;
-        
+            padding-top: 70px;
     }
 }
 
@@ -595,6 +649,7 @@ float: right;
     
 
 }
+
 
 #JavaJQBar {
 	position: absolute;
@@ -758,6 +813,13 @@ footer{
         
         
     }
+    
+         h5{
+            font-size: 17px;
+            color: white;
+            text-align: center;
+            padding-bottom: 20px;
+        }
       }
      
     i{
@@ -766,7 +828,21 @@ footer{
         padding-left: 9px;
         padding-right: 9px;
         
+        
+          -webkit-animation-duration: 2s;
+     -webkit-transition: all 1s ease;
+
+    animation-duration: 2s;
+   transition: all 1s ease;
+        
     }
+
+i:hover{
+    color: $tan;
+}
+i:active{
+    color: $tan;
+}
     .socialMedia{
         text-align: center;
         
@@ -775,8 +851,40 @@ footer{
 
 
 /**************************************** Media Queries ****************************************/
+@media only screen and (min-width: 700px) {
+    .mobileNav{
+        display: none;
+    } 
+}
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 700px) {
+    .regNav{
+        display: none;
+    } 
+    
+
+
+}
+
+
+
+@media screen and (device-aspect-ratio: 40/71) {
+    .cityPhoto {
+    height: 600px;
+    
+    h1{
+padding-top: 100px;
+margin-left: 20px;
+margin-right: 20px;
+font-size: 69px;
+color: #fff;
+font-weight: 800;
+    text-shadow: 4px 4px 10px #000;   
+text-align: center;   
+}
+    }
+}
+@media only screen and (max-width: 800px) {
     .f50 {
         width: 100%;
     }
@@ -801,13 +909,7 @@ footer{
     .f25:nth-of-type(2n+1) {
         clear: left;
     }
-     .mySkills {
-        height: 200px;
-        h1 {
-            padding-top: 70px;
-        }
-    }
-    
+ 
     .key{
 text-align: left;
 
@@ -818,6 +920,8 @@ margin-top: 10px;
     }
 
 }
+
+
 
 @media only screen and (min-width: 800px) {
     .f50 {
@@ -833,7 +937,7 @@ margin-top: 10px;
         width: 75%;
     }
     .aboutMe {
-        height: 400px;
+        height: 435px;
         h1 {
             padding-top: 180px;
         }
@@ -851,6 +955,5 @@ margin: 0 auto;
 margin-bottom: 10px;
 margin-top: 10px;
     }
-   
 
 }
