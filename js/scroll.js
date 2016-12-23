@@ -44,37 +44,6 @@ $(document).ready(function(){
 ///////////////////////// Progress Bars /////////////////////////
 
 
-
-   $(function() {
-    
-    var $meters = $(".meter > span");
-    var $section = $('#third');
-    var $queue = $({});
-    
-    function loadDaBars() {
-				$(".meter > span").each(function() {
-					$(this)
-						.data("origWidth", $(this).width())
-						.width(0)
-						.animate({
-							width: $(this).data("origWidth")
-						}, 1200);
-				});
-    }
-    
-    $(document).bind('scroll', function(ev) {
-        var scrollOffset = $(document).scrollTop();
-        var containerOffset = $section.offset() - window.innerHeight;
-        if (scrollOffset > containerOffset) {
-            loadDaBars();
-            // unbind event not to load scrolsl again
-            $(document).unbind('scroll');
-        }
-    });
-    
-});
-
-
 ///////////////////////// Mobile Nav /////////////////////////    
 
 $(document).ready(function(){ 
